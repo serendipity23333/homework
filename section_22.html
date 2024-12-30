@@ -162,7 +162,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="section_21.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter_2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="section_21.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter_2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="chapter_3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -221,6 +221,10 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul>
 </li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter_3.html" class="internal"><span class="codenumber">3</span> <span class="title">小组分工</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="section_31.html" class="internal"><span class="codenumber">3.1</span> <span class="title">小组分工</span></a></div></li></ul>
+</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section_22"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">2.2</span><span class="space"> </span><span class="title">矩阵的奇异值分解</span>
@@ -274,27 +278,35 @@ A[v_{1},v_{2},\dots,v_{r},v_{r+1},\dots,v_{m}]=
 <div class="para" id="subsec-222-2">在进行SVD分解后，可以选取前K个奇异值来代替原矩阵，所以可以利用SVD进行数据压缩或降维。 下面是一段演示：</div>
 <div id="subsec-222-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">import numpy as np
 import matplotlib.pyplot as plt
-from skimage import data, color
+from skimage import data
 
-image = color.rgb2gray(data.chelsea())
+image = data.chelsea()
 
-U, S, Vt = np.linalg.svd(image, full_matrices=False)
+R, G, B = image[:, :, 0], image[:, :, 1], image[:, :, 2]
 
-k = 25
-reduced_image = np.dot(U[:, :k], np.dot(np.diag(S[:k]), Vt[:k, :]))
+def svd_compress(channel, k):
+    U, S, Vt = np.linalg.svd(channel, full_matrices=False)
+    return np.dot(U[:, :k], np.dot(np.diag(S[:k]), Vt[:k, :]))
+
+k = 30
+R_compressed = svd_compress(R, k)
+G_compressed = svd_compress(G, k)
+B_compressed = svd_compress(B, k)
+
+compressed_image = np.stack((R_compressed, G_compressed, B_compressed), axis=2)
 
 fig, ax = plt.subplots(1, 2, figsize=(12, 6))
 
-ax[0].imshow(image, cmap='gray')
+ax[0].imshow(image)
 ax[0].set_title('Original Image')
 
-ax[1].imshow(reduced_image, cmap='gray')
-ax[1].set_title(f'Reduced Image (k={k})')
+ax[1].imshow(compressed_image.astype(np.uint8))
+ax[1].set_title(f'Compressed Image (k={k})')
 
 plt.show()
 </script></div></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="section_21.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+<a class="previous-button button" href="section_21.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="chapter_3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

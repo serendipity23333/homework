@@ -134,6 +134,24 @@ var ptx_lunr_docs = [
   "number": "2.2.1",
   "title": "",
   "body": "  SVD(Singular Value Decomposition)，将矩阵 分解为 的形式， 其中 和 是正交矩阵，而 为半正定矩阵。   "
+},
+{
+  "id": "section_31",
+  "level": "1",
+  "url": "section_31.html",
+  "type": "Section",
+  "number": "3.1",
+  "title": "小组分工",
+  "body": " 小组分工   小组分工情况    小组成员  任务一  任务二    赵相帅  辅助制作Pretext，完成Tikz作图和sage功能嵌入  使用manim库进行动画制作    张亚文  制作Pretext笔记      "
+},
+{
+  "id": "table_2",
+  "level": "2",
+  "url": "section_31.html#table_2",
+  "type": "Table",
+  "number": "3.1.1",
+  "title": "小组分工情况",
+  "body": " 小组分工情况    小组成员  任务一  任务二    赵相帅  辅助制作Pretext，完成Tikz作图和sage功能嵌入  使用manim库进行动画制作    张亚文  制作Pretext笔记     "
 }
 ]
 
