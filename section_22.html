@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Homework of Matrix Theory</title>
+<title>矩阵的奇异值分解</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -162,7 +162,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><span class="up-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></span><a class="next-button button" href="frontmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="section_21.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter_2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -171,7 +171,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">封面</span></a></div></li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter_1.html" class="internal"><span class="codenumber">1</span> <span class="title">矩阵的四个基本空间</span></a></div>
@@ -202,9 +202,9 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter_2.html" class="internal"><span class="codenumber">2</span> <span class="title">矩阵的奇异值分解(SVD)</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section_21.html" class="internal"><span class="codenumber">2.1</span> <span class="title">矩阵的相似对角化</span></a></div>
 <ul class="structural toc-item-list">
@@ -212,9 +212,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_21.html#subsec-212" class="internal"><span class="codenumber">2.1.2</span> <span class="title">相似对角化</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="section_22.html" class="internal"><span class="codenumber">2.2</span> <span class="title">矩阵的奇异值分解</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_22.html#subsec-221" class="internal"><span class="codenumber">2.2.1</span> <span class="title">SVD</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_22.html#subsec-222" class="internal"><span class="codenumber">2.2.2</span> <span class="title">SVD的应用</span></a></div></li>
 </ul>
@@ -222,13 +222,79 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="book" id="my-great-book"><nav class="summary-links"><ul>
-<li><a href="frontmatter.html" class="internal"><span class="title">封面</span></a></li>
-<li><a href="chapter_1.html" class="internal"><span class="codenumber">1</span> <span class="title">矩阵的四个基本空间</span></a></li>
-<li><a href="chapter_2.html" class="internal"><span class="codenumber">2</span> <span class="title">矩阵的奇异值分解(SVD)</span></a></li>
-</ul></nav></section></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section_22"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.2</span><span class="space"> </span><span class="title">矩阵的奇异值分解</span>
+</h2>
+<section class="subsection" id="subsec-221"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="space"> </span><span class="title">SVD</span>
+</h3>
+<div class="para" id="subsec-221-2">
+<a href="section_21.html#subsec-212" class="internal" title="Subsection 2.1.2: 相似对角化">上文</a>提到过，只有方阵才能进行相似对角化， 若对一般矩阵进行类似于对角化的分解，可使用奇异值分解(SVD)方法。</div>
+<article class="definition definition-like" id="def-221"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span>
+</h4>
+<div class="para" id="def-221-1-1">SVD(Singular Value Decomposition)，将矩阵<span class="process-math">\(A\)</span>分解为<span class="process-math">\(U \Sigma V^{T}\)</span>的形式， 其中<span class="process-math">\(U\)</span>和<span class="process-math">\(V\)</span>是正交矩阵，而<span class="process-math">\(\Sigma\)</span>为半正定矩阵。</div></article><div class="para" id="subsec-221-4">接下来简单描述一下SVD的过程：</div>
+<div class="para logical" id="subsec-221-5">
+<div class="para">
+<span class="process-math">\(A_{m/times n}\)</span>为任意矩阵，虽然<span class="process-math">\(A\)</span>无法进行对角化，但对称方阵<span class="process-math">\(A^{T}A\)</span>可以进行正交对角化， 且<span class="process-math">\(A^{T}A\)</span>有如下的性质：</div>
+<ol class="decimal" id="subsec-221-5-5">
+<li id="subsec-221-5-5-1"><div class="para" id="p-derived-subsec-221-5-5-1"><span class="process-math">\(\displaystyle R(A^{T}A)=R(A)\)</span></div></li>
+<li id="subsec-221-5-5-2"><div class="para" id="p-derived-subsec-221-5-5-2"><span class="process-math">\(\displaystyle N(A^{T}A)=N(A)\)</span></div></li>
+</ol>
+<div class="para">因此，<span class="process-math">\(A^{T}A\)</span>和矩阵<span class="process-math">\(A\)</span>对<span class="process-math">\(\mathbb{R}^{n}\)</span>空间有相同的划分。 设<span class="process-math">\(A^{T}A\)</span>的特征向量为<span class="process-math">\(\left [ v_{1},v_{2},\dots,v_{n} \right ]\)</span>， 则<span class="process-math">\(\left [ v_{1},v_{2},\dots,v_{n} \right ]\)</span>是<span class="process-math">\(\mathbb{R}^{n}\)</span>空间下的一组标准正交基。 此时，由<span class="process-math">\(A^{T}Av=\lambda v\longrightarrow (Av)^{T}Av=\lambda v^{2}\)</span>可知，<span class="process-math">\(\left \| Av \right \| =\sqrt{\lambda}\)</span>。 <span class="process-math">\(\sqrt{\lambda_{i}}\)</span>即为矩阵的奇异值。经行空间的基经<span class="process-math">\(A\)</span>变换后的列空间的基可由<span class="process-math">\(\frac{Av}{\sqrt{\lambda }} \)</span>得到。</div>
+</div>
+<div class="para" id="subsec-221-6">最终，矩阵被分解为<span class="process-math">\(A_{m\times n}=U_{m\times m}\Sigma_{m\times n}V^{T}_{n\times n}\)</span>的形式。 也可以表示为：</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/subsec-212.html">
+\begin{equation*}
+A[v_{1},v_{2},\dots,v_{r},v_{r+1},\dots,v_{m}]=
+[u_{1},u_{2},\dots,u_{r},u_{r+1},\dots,u_{n}]
+\begin{array}{ccc|c}
+\begin{bmatrix}
+\sigma_{1} \amp \amp \amp \\
+\amp \ddots \amp \amp \\
+\amp \amp \sigma_{r} \amp \\
+\hline
+\amp \amp \amp [0]
+\end{bmatrix}
+\end{array}
+\end{equation*}
+</div>
+<div class="para logical" id="subsec-221-8"><ul class="disc" id="subsec-221-8-1">
+<li id="subsec-221-8-1-1"><div class="para" id="p-derived-subsec-221-8-1-1">
+<span class="process-math">\(v_{1},\dots,v_{r}\)</span>是行空间标准正交基</div></li>
+<li id="subsec-221-8-1-2"><div class="para" id="p-derived-subsec-221-8-1-2">
+<span class="process-math">\(u_{1},\dots,u_{r}\)</span>是列空间标准正交基</div></li>
+<li id="subsec-221-8-1-3"><div class="para" id="p-derived-subsec-221-8-1-3">
+<span class="process-math">\(v_{r+1},\dots,v_{n}\)</span>是零空间标准正交基</div></li>
+<li id="subsec-221-8-1-4"><div class="para" id="p-derived-subsec-221-8-1-4">
+<span class="process-math">\(u_{r+1},\dots,u_{m}\)</span>是左零空间标准正交基</div></li>
+</ul></div></section><section class="subsection" id="subsec-222"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="space"> </span><span class="title">SVD的应用</span>
+</h3>
+<div class="para" id="subsec-222-2">在进行SVD分解后，可以选取前K个奇异值来代替原矩阵，所以可以利用SVD进行数据压缩或降维。 下面是一段演示：</div>
+<div id="subsec-222-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">import numpy as np
+import matplotlib.pyplot as plt
+from skimage import data, color
+
+image = color.rgb2gray(data.chelsea())
+
+U, S, Vt = np.linalg.svd(image, full_matrices=False)
+
+k = 25
+reduced_image = np.dot(U[:, :k], np.dot(np.diag(S[:k]), Vt[:k, :]))
+
+fig, ax = plt.subplots(1, 2, figsize=(12, 6))
+
+ax[0].imshow(image, cmap='gray')
+ax[0].set_title('Original Image')
+
+ax[1].imshow(reduced_image, cmap='gray')
+ax[1].set_title(f'Reduced Image (k={k})')
+
+plt.show()
+</script></div></section></section></div>
 <div class="ptx-content-footer">
-<span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="frontmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="section_21.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
